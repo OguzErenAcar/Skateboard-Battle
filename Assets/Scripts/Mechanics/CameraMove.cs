@@ -8,16 +8,24 @@ using UnityEngine;
 
 public class CameraMove : MonoBehaviour
 { 
+
     
     // Start is called before the first frame update
-    private Vector3 currentPositionDiference;
     [SerializeField] private float radius =3;
-    [SerializeField] Transform body;
+    private Vector3 currentPositionDiference;
+    private Transform player;//action ile atama ypasak mesela ? her kullanıcı için farklı olacakmı 
 
+      public void setPlayer(GameObject _player){
+        player=_player.transform;
+    }
+    public Transform getPlayer(){
+        return player.transform;
+    }
+   
     void Start()
     {
         
-         currentPositionDiference=new Vector3(body.position.x,body.position.y+2,body.position.z-3.5f);
+         currentPositionDiference=new Vector3(player.position.x,player.position.y+2,player.position.z-3.5f);
          transform.position=currentPositionDiference;
         // transform.LookAt(Skateboard);
          transform.localEulerAngles=new Vector3(20,0,0);  
@@ -28,12 +36,12 @@ public class CameraMove : MonoBehaviour
     {   
         // currentPositionDiference=new Vector3(Skateboard.position.x,Skateboard.position.y+2,Skateboard.position.z-2.5f);
         
-        Vector3 SkateboardAngles= body.rotation.eulerAngles; 
+        Vector3 SkateboardAngles= player.rotation.eulerAngles; 
 
         transform.localEulerAngles=new Vector3(20,SkateboardAngles.y,0); 
-        float x=body.position.x+Mathf.Sin((SkateboardAngles.y+180)* Mathf.PI/180)*radius;
-        float y=body.position.y+2;
-        float z=body.position.z+Mathf.Cos((SkateboardAngles.y+180)* Mathf.PI/180)*radius;
+        float x=player.position.x+Mathf.Sin((SkateboardAngles.y+180)* Mathf.PI/180)*radius;
+        float y=player.position.y+2;
+        float z=player.position.z+Mathf.Cos((SkateboardAngles.y+180)* Mathf.PI/180)*radius;
 
         transform.DOMoveX(x,1f);
         transform.DOMoveY(y,0);

@@ -8,17 +8,16 @@ public class FlyingController : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public static event  Action onMapCollisionExit;
-    public static event  Action<bool> onMapCollisionEnter;
-    [SerializeField] private GameObject map;
+    public  event  Action onMapCollisionExit;
+    public  event  Action<bool> onMapCollisionEnter;
     private bool flying=false;
     private CustomTools myTools=new CustomTools();
-
     private int OnCollisionCountToMap=0; 
+ 
+  private void Start() {
+    
+  }
 
-    private void OnTriggerEnter(Collider other) {
-        print(other.gameObject.name);
-    }
    private void OnCollisionExit(Collision collision)
 {
         OnCollisionCountToMap-=1;

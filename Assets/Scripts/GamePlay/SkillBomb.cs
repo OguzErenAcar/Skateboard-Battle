@@ -27,8 +27,16 @@ public class SkillBomb : SkillManager
         });
     }
 
-      protected void OnTriggerEnter(Collider other) {
-        print(other.name);
+    private void OnTriggerEnter(Collider other) {
+        try
+        {
+         GameObject player =other.transform.parent.gameObject;
+        if(player.CompareTag("Player")){
+          print("added bomb skill" +player.name);          
+          player.GetComponent<SkillsController>().bombSkill(true);
+      } 
+        }
+        catch (System.Exception) { }
     }
 
 

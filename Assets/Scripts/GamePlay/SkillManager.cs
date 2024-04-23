@@ -38,9 +38,9 @@ public class SkillManager : MonoBehaviour
         }
          
          skills[0].transform.gameObject.AddComponent<SkillRocket>();
-         skills[1].transform.gameObject.AddComponent<SkillBomb>();
+         skills[1].transform.gameObject.AddComponent<SkillRocket>();
          skills[2].transform.gameObject.AddComponent<SkillRocket>();
-         skills[3].transform.gameObject.AddComponent<SkillBomb>();
+         skills[3].transform.gameObject.AddComponent<SkillRocket>();
 
     }
  
