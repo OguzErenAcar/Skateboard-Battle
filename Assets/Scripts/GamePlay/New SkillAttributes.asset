@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72b1c7118d3c422cb09068307b94a96, type: 3}
+  m_Name: New SkillAttributes
+  m_EditorClassIdentifier: 
+  prefabskill: {fileID: 7733752924207480897, guid: fc18d2c1cabc04dd3a53d91d06208217,
+    type: 3}
+  defaultColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  textures:
+  - {fileID: 2800000, guid: c3779148931bb4191bc87239c968ad8f, type: 3}
+  - {fileID: 2800000, guid: 5f4416004a0d444ab8c7b2fae8ed8276, type: 3}
+  bomb: {fileID: 2800000, guid: 5f4416004a0d444ab8c7b2fae8ed8276, type: 3}
